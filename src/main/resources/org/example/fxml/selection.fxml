@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<GridPane alignment="CENTER" hgap="10" vgap="10" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.java2test.SelectionSceneController">
+    <Label text="Select Currencies and Time Period" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2" />
+    <Label text="Start Date" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+    <DatePicker fx:id="startDatePicker" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+    <Label text="End Date" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+    <DatePicker fx:id="endDatePicker" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+    <Label text="Currency 1" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+    <ComboBox fx:id="currency1ComboBox" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+    <Label text="Currency 2" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+    <ComboBox fx:id="currency2ComboBox" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+    <Button fx:id="submitButton" text="Submit" onAction="#handleSubmitButtonAction" GridPane.columnIndex="0" GridPane.rowIndex="5" GridPane.columnSpan="2" />
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20" />
+    </padding>
+</GridPane>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.java2test.DataVisualizationController">
+    <center>
+        <SplitPane>
+            <TableView fx:id="dataTable" />
+            <LineChart fx:id="lineChart" title="Exchange Rate">
+                <xAxis>
+                    <CategoryAxis label="Date" />
+                </xAxis>
+                <yAxis>
+                    <NumberAxis label="Value" />
+                </yAxis>
+            </LineChart>
+        </SplitPane>
+    </center>
+    <bottom>
+        <HBox spacing="10" alignment="CENTER">
+            <DatePicker fx:id="startProfitDatePicker" promptText="Start Date"/>
+            <DatePicker fx:id="endProfitDatePicker" promptText="End Date"/>
+            <Button text="Calculate Profit" onAction="#calculateProfitBTN"/>
+        </HBox>
+    </bottom>
+</BorderPane>
