@@ -125,8 +125,8 @@ public class SelectionSceneController {
 
         List<String> currencies = database.getCurrencies(startDate, endDate);
 
-        currency1ComboBox.setItems(FXCollections.observableArrayList(currencies));
-        currency2ComboBox.setItems(FXCollections.observableArrayList(currencies));
+        currency1ComboBox.setItems(FXCollections.observableArrayList(currencies).sorted());
+        currency2ComboBox.setItems(FXCollections.observableArrayList(currencies).sorted());
     }
 
 }

@@ -46,7 +46,7 @@ public class Database {
             if (response.statusCode() == 200) {
                 InputStream inputStream = response.body();
                 DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-                factory.setNamespaceAware(true); // Add this line to handle namespaces
+                factory.setNamespaceAware(true); //handle namespaces
                 DocumentBuilder builder = factory.newDocumentBuilder();
                 Document document = builder.parse(inputStream);
                 NodeList nodeList = document.getElementsByTagNameNS("http://www.bsi.si", "tecajnica"); // Use getElementsByTagNameNS to handle namespaces

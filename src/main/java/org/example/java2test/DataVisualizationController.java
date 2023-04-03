@@ -165,7 +165,7 @@ public class DataVisualizationController {
 
         double profit = (endRate - startRate) * 100;
 
-        showAlert(currency1 + " : " + currency2, profit + "%");
+        showAlert(currency1 + " : " + currency2, String.format("%.3f",profit) + "%");
     }
 
 

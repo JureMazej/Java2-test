@@ -5,11 +5,15 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Insets?>
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="org.example.java2test.DataVisualizationController">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
     <center>
-        <SplitPane>
+        <SplitPane dividerPositions="0.5">
             <TableView fx:id="dataTable" />
             <LineChart fx:id="lineChart" title="Exchange Rate">
                 <xAxis>
@@ -23,6 +27,10 @@
     </center>
     <bottom>
         <HBox spacing="10" alignment="CENTER">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <Label text="Opportunistic Gains:" />
             <DatePicker fx:id="startProfitDatePicker" promptText="Start Date"/>
             <DatePicker fx:id="endProfitDatePicker" promptText="End Date"/>
             <Button text="Calculate Profit" onAction="#calculateProfitBTN"/>
